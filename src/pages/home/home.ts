@@ -3,6 +3,9 @@ import { NavController } from 'ionic-angular';
 import { UsersPage } from '../users/users';
 import { ListsPage } from '../lists/lists';
 import { SlidePage } from '../slide/slide';
+import { AboutPage } from '../about/about';
+
+
 import { Person } from '../../models/person.model'
 
 
@@ -41,6 +44,10 @@ export class HomePage {
 
    goToSlidePage(){
     this.navCtrl.push( SlidePage );
+  }
+
+  goToAboutPage(){
+    this.navCtrl.push( AboutPage );
   }
 
 }

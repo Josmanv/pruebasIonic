@@ -1,0 +1,38 @@
+<!--
+  Generated template for the AboutPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>about</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h1>{{ twitter }}</h1>
+  <input type="text" [value]="twitter">
+  <button (click)="showAlert()">dale</button>
+  <!--<input type="text" [value]="twitter" (input)="twitter=$event.target.value">-->
+  <input type="text" [(ngModel)]="twitter">
+
+  <p #myVar>Hola Mundo</p>
+  <button (click)="changeDom(myVar)">Hola</button>
+
+  <p *ngIf="true">Hola nuevos mundos</p>
+  <p *ngIf="twitter == '@josmanv'">Twitter es josmanv</p>
+  <p *ngIf="twitter != '@josmanv'">Twitter no es josmanv</p>
+
+  <ul>
+    <li *ngIf="numeros.length == 0">No hay numeros</li>
+    <li *ngFor="let numero of numeros">{{ numero }}</li>
+  </ul>
+<button (click)="addNumber()">añadir numero</button>
+<button (click)="removeNumber()">eliminar numero</button>
+
+</ion-content>
