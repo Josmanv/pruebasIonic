@@ -1,14 +1,23 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+      Mi primera prueba
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
+  <h1>Hola</h1>
+  Esta es mi primera prueba con Ionic.
+  <ion-list>
+    <ion-item *ngFor="let item of lists">
+      {{ item.name }}
+    </ion-item>
+  </ion-list>
+  <button ion-button (click)="goToUsersPage()">Usuarios</button>
+  <button ion-button (click)="goToListsPage()">Listas</button>
+  <button ion-button (click)="goToSlidePage()">Slide</button>
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+    Visita mi portfolio <a href="https://josmanv.github.io/">Mi Portfolio</a> para conocerme.
   </p>
 </ion-content>
